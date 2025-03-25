@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'dock'
+    }
+
+  }
   stages {
     stage('error') {
       agent any
