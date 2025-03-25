@@ -1,7 +1,8 @@
 pipeline {
-  agent any
+  agent none
   stages {
-    stage('') {
+    stage('error') {
+      agent any
       steps {
         echo 'Hello from J to world'
       }
