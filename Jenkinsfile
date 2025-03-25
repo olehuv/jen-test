@@ -1,17 +1,23 @@
 pipeline {
-  agent {
-    node {
-      label 'dock'
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
     }
-
-  }
-  stages {
-    stage('error') {
-      agent any
-      steps {
-        echo 'Hello from J to world'
-      }
-    }
-
-  }
 }
